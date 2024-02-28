@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz</title>
+        <link rel="stylesheet" type="text/css" href="quizStyle.css"> 
+    </head>
+
+    <body>
+        <div class="home-page">
+            <h1>Quiz</h1>
+            <div class="username">             
+                    <label for="Username"><p>Please enter your name:</p></label>
+                    <input type="text" id="Username" name="Username" placeholder="Your Name">
+                    <br><br><br>
+                    <button type="submit" class="btn" onclick="submit()">Submit</button>
+            </div> 
+        </div>
+        <script>
+            function submit(){
+                var currentName = document.getElementById("Username").value;
+                console.log(currentName);
+                location.href = 'ConfirmName.html?Username='+ currentName;
+            }
+        </script>
+    </body>
+</html>
